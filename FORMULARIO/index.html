@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="CSS/style.css"/>
+</head>
+<body>
+    <h2>Cadastre sua área de interesse no nosso banco de talentos</h2>
+    <form action="register.php" method="get">
+        <fieldset>
+            <legend>Preencha as informações</legend>
+            <label for="firstname">Nome:</label>
+            <input type="text" name="firstname" required>
+            <label for="lastname">Sobrenome</label>
+            <input type="text" name="lastname">
+            <label for="age">Idade:</label>
+            <input type="text" name="age" required/>
+        </fieldset>
+        <br>
+        
+    <fieldset>
+
+        <div>
+            <label for="job">Qual sua Profissão?</label>
+            <input type="text" list="job" name="Profissão">
+
+            <datalist id="job">
+            <option value="" selected></option>
+            <option value="Desenvolvedor de Software"></option>
+            <option value="Analista de Sistemas"></option>
+            <option value="Engenheiro de Dados"></option>
+            <option value="Adiministradr de Banco de Dados(DBA)"></option>
+            <option value="Arquiteto de Soluções"></option>
+            <option value="Especialista em Seguança da Informação"></option>
+            <option value="Gerente de Projeto de T.I"></option>
+            <option value="Analista de Rede"></option>
+            <option value="Especialista em Cloud Computing"></option>
+            <option value="Designer de Experiência do Usuário(UX)"></option>
+            </datalist>
+
+        </div>
+
+        <div>
+            <label for="salario">Pretenção Salarial</label>
+            <div class="radio">
+                <input type="checkbox" name="salario[]" value="opcao1">
+                <label for="opcao1">R$ 1.620,00 a 2.220,00</label>
+            </div>
+
+            <div class="radio">
+                <input type="checkbox" name="salario[]" value="opcao2">
+                <label for="opcao2  ">R$ 2.220,00 a 2.620,00</label>
+            </div>
+
+            <div class="radio">
+                <input type="checkbox" name="salario[]" value="opcao3">
+                <label for="opcao3  ">R$ 2.620,00 a 3.620,00</label>
+            </div>
+
+            <div class="radio">
+                <input type="checkbox" name="salario[]" value="opcao4">
+                <label for="opcao4  ">R$ 3.220,00 a 7.620,00 </label>
+            </div>
+        </div>
+    
+    </fieldset>
+
+<br>
+        <div>
+            <label for="curriculo">Anexe seu Currículo:</label>
+            <input type="file" name="curriculo">
+        </div>
+
+        <div>
+            <label for="coment">Deixe-nos conhecê-lo um pouco</label>
+            <textarea name="coment"></textarea>    
+        </div>
+
+        <div>
+            <label for="email">Cadastre seu email para contato</label>
+            <input type="email" name="email" required>
+        </div>
+
+        <div>
+            <label for="contract">Você concorda com os termos?</label>
+            <select name="contract">
+                <option value="sim">Sim</option>
+                <option value="nao" selected>Não</option>
+            </select>
+        </div>
+
+        <br>
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>
